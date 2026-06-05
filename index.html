@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clarity Advisory — Conseil stratégique & aide à la décision</title>
+  <meta name="description" content="Clarity Advisory accompagne dirigeants, entrepreneurs et professionnels libéraux dans l’analyse stratégique, économique et opérationnelle d’opportunités d’association, d’investissement, de reprise ou de développement." />
+  <meta name="theme-color" content="#07111f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --ink:#0b0d10;
+      --night:#07111f;
+      --night-2:#0d1b2e;
+      --blue:#1c69d4;
+      --blue-2:#0653b6;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --soft:#f6f7f9;
+      --white:#fff;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--white);line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(7,17,31,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.09)}
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:13px;color:#fff;font-weight:900;letter-spacing:.02em}
+    .mark{width:40px;height:40px;border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;font-weight:900;letter-spacing:-.08em;background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(255,255,255,.02))}
+    .brand small{display:block;font-size:11px;font-weight:700;color:#a9b4c4;letter-spacing:.16em;text-transform:uppercase;margin-top:1px}
+    .links{display:flex;align-items:center;gap:26px;color:#d7deea;font-size:14px;font-weight:700}
+    .links a:hover{color:#fff}
+    .nav-cta{padding:12px 18px;border:1px solid rgba(255,255,255,.75);color:#fff;font-weight:800;font-size:14px}
+    .hero{min-height:100vh;background:
+      radial-gradient(circle at 73% 12%,rgba(28,105,212,.34),transparent 30%),
+      linear-gradient(135deg,rgba(7,17,31,.92),rgba(7,17,31,.78)),
+      linear-gradient(120deg,#07111f,#172439 55%,#0b0d10);color:#fff;padding:150px 0 82px;display:flex;align-items:center;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;inset:auto -10% -22% 42%;height:48%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);transform:skewY(-10deg);border-top:1px solid rgba(255,255,255,.12)}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:74px;align-items:end}
+    .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:900;color:#9ebcf0;margin-bottom:24px}
+    h1{font-size:clamp(48px,7vw,92px);line-height:.98;letter-spacing:-.055em;font-weight:300;margin:0 0 28px;max-width:880px}
+    .hero p{font-size:clamp(18px,2vw,23px);line-height:1.45;color:#dce5f3;max-width:730px;margin:0 0 36px}
+    .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 22px;border:1px solid currentColor;font-weight:900;min-height:54px;transition:.18s ease;font-size:15px}
+    .btn.primary{background:#fff;color:#07111f;border-color:#fff}.btn.primary:hover{background:#eaf1fb;border-color:#eaf1fb}.btn.secondary{color:#fff;border-color:rgba(255,255,255,.52)}.btn.secondary:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+    .hero-card{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.055);padding:28px;backdrop-filter:blur(10px)}
+    .hero-card .label{color:#a9b4c4;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:900;margin-bottom:18px}
+    .hero-card ul{list-style:none;padding:0;margin:0;display:grid;gap:15px}.hero-card li{display:flex;gap:12px;align-items:flex-start;color:#eef4ff}.hero-card li:before{content:"";width:7px;height:7px;margin-top:8px;background:var(--blue);flex:0 0 auto}
+    section{padding:104px 0}.section-dark{background:var(--night);color:#fff}.section-soft{background:var(--soft)}
+    .section-head{display:grid;grid-template-columns:.78fr 1fr;gap:56px;align-items:start;margin-bottom:52px}.kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);font-weight:900;margin-bottom:14px}.section-dark .kicker{color:#9ebcf0}
+    h2{font-size:clamp(34px,4.5vw,58px);line-height:1.02;letter-spacing:-.045em;font-weight:400;margin:0}.lead{font-size:20px;color:#4b5563;line-height:1.65;margin:0}.section-dark .lead{color:#c9d3e2}
+    .problem{border-left:4px solid var(--blue);padding-left:34px;max-width:900px}.problem p{font-size:23px;line-height:1.55;color:#2d3748;margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.card{background:#fff;padding:34px;min-height:220px}.card .num,.step .num{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--blue);font-size:13px;font-weight:900;letter-spacing:.12em}.card h3,.step h3{font-size:22px;line-height:1.16;letter-spacing:-.02em;margin:34px 0 12px}.card p{color:#5d6675;margin:0}.section-dark .cards{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.1)}.section-dark .card{background:rgba(255,255,255,.045);border:0}.section-dark .card p{color:#c9d3e2}
+    .missions{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.mission{padding:24px 26px;border:1px solid var(--line);background:#fff;display:flex;gap:16px;align-items:center;font-weight:800;color:#111827}.mission:before{content:"";width:10px;height:10px;background:var(--blue);flex:0 0 auto}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(255,255,255,.13)}.step{padding:34px 28px;border-right:1px solid rgba(255,255,255,.13);min-height:270px}.step:last-child{border-right:0}.step p{color:#c9d3e2;margin:0}.step h3{color:#fff}
+    .deliverables{display:grid;grid-template-columns:1fr 1fr;gap:18px}.deliverable{padding:26px;border:1px solid #d8dde6;background:#fff}.deliverable strong{display:block;font-size:19px;margin-bottom:8px}.deliverable span{color:#657085}
+    .disclaimer{border:1px solid rgba(255,255,255,.18);background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.035));padding:42px;display:grid;grid-template-columns:.5fr 1fr;gap:40px}.disclaimer p{font-size:20px;line-height:1.7;color:#d7deea;margin:0}.disclaimer h2{font-size:42px}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}.about-box{border:1px solid var(--line);padding:40px;background:#fff}.about-box p{font-size:20px;line-height:1.65;color:#374151;margin:0}.stats{display:grid;gap:1px;background:#dfe3ea;border:1px solid #dfe3ea}.stat{background:#fff;padding:28px}.stat strong{display:block;font-size:34px;letter-spacing:-.04em}.stat span{color:#667085}
+    .contact{background:linear-gradient(135deg,#07111f,#0d1b2e 62%,#07111f);color:#fff}.contact-panel{display:grid;grid-template-columns:1fr .55fr;gap:50px;align-items:center;border:1px solid rgba(255,255,255,.16);padding:54px;background:rgba(255,255,255,.045)}.contact h2{font-size:clamp(36px,5vw,64px)}.contact p{font-size:21px;color:#d8e2f0;line-height:1.6;max-width:720px}.contact-note{font-size:13px!important;color:#93a4bd!important;margin-top:18px!important}
+    footer{background:#050912;color:#aab3c2;padding:36px 0}.footer-grid{display:flex;justify-content:space-between;gap:30px;align-items:flex-start}.footer-brand{color:#fff;font-weight:900}.footer-small{max-width:580px;font-size:13px;line-height:1.6;text-align:right}
+    @media(max-width:900px){.links a:not(.nav-cta){display:none}.hero-grid,.section-head,.about,.contact-panel,.disclaimer{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.step{border-bottom:1px solid rgba(255,255,255,.13)}.missions,.deliverables{grid-template-columns:1fr}section{padding:78px 0}.hero{padding-top:128px}.hero-card{display:none}.footer-grid{display:grid}.footer-small{text-align:left}}
+    @media(max-width:560px){.container{width:min(100% - 28px,var(--max))}.nav-inner{height:68px}.brand small{display:none}.nav-cta{display:none}h1{font-size:48px}.hero p,.problem p,.lead{font-size:18px}.cards,.steps{grid-template-columns:1fr}.step{border-right:0}.card{min-height:auto}.contact-panel,.disclaimer{padding:28px}.mission{align-items:flex-start}.footer-small{font-size:12px}}
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Navigation principale">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="Clarity Advisory accueil"><span class="mark">CA</span><span>Clarity Advisory<small>Conseil stratégique</small></span></a>
+      <div class="links">
+        <a href="#approche">Approche</a><a href="#missions">Missions</a><a href="#livrables">Livrables</a><a href="#role">Notre rôle</a><a class="nav-cta" href="#contact">Planifier un échange</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Conseil stratégique & aide à la décision</div>
+          <h1>Décidez avec clarté avant de vous engager.</h1>
+          <p>Clarity Advisory accompagne les dirigeants, entrepreneurs et professionnels libéraux dans l’analyse d’opportunités d’association, d’investissement, de reprise ou de développement.</p>
+          <div class="cta-row"><a class="btn primary" href="#contact">Planifier un échange →</a><a class="btn secondary" href="#approche">Découvrir notre approche</a></div>
+        </div>
+        <aside class="hero-card" aria-label="Domaines d'intervention">
+          <div class="label">Avant l’engagement</div>
+          <ul><li>Comprendre le modèle économique réel</li><li>Identifier les risques opérationnels et financiers</li><li>Préparer les questions à poser aux conseils habilités</li><li>Structurer une position de négociation claire</li></ul>
+        </aside>
+      </div>
+    </header>
+
+    <section id="probleme">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Problème</div><h2>Avant de signer, il faut comprendre.</h2></div></div>
+        <div class="problem"><p>Un projet d’association ou d’investissement engage souvent plusieurs années de carrière, de capital et de responsabilité. Pourtant, les décisions sont parfois prises avec une information incomplète, une lecture trop juridique des documents, ou sans vision claire des risques économiques et opérationnels.</p></div>
+      </div>
+    </section>
+
+    <section id="approche" class="section-soft">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Ce que nous faisons</div><h2>Un regard indépendant sur votre décision.</h2></div><p class="lead">Nous clarifions les enjeux business derrière les documents, les hypothèses et les échanges. L’objectif : transformer une situation complexe en décision structurée, argumentée et négociable.</p></div>
+        <div class="cards">
+          <article class="card"><span class="num">01</span><h3>Analyse de l’opportunité</h3><p>Évaluer la cohérence stratégique, l’intérêt économique et les conditions de réussite.</p></article>
+          <article class="card"><span class="num">02</span><h3>Lecture stratégique des documents</h3><p>Lire les documents sous l’angle business, gouvernance, risques et équilibre des parties.</p></article>
+          <article class="card"><span class="num">03</span><h3>Analyse économique et financière</h3><p>Comprendre les revenus, marges, investissements, dépendances et scénarios de rentabilité.</p></article>
+          <article class="card"><span class="num">04</span><h3>Identification des risques et opportunités</h3><p>Mettre en évidence les points de vigilance, zones floues et leviers de création de valeur.</p></article>
+          <article class="card"><span class="num">05</span><h3>Préparation des négociations</h3><p>Structurer les sujets à arbitrer, les concessions possibles et les questions prioritaires.</p></article>
+          <article class="card"><span class="num">06</span><h3>Synthèse claire pour décider</h3><p>Produire une lecture courte, utile et orientée décision, sans jargon inutile.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="missions">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Missions types</div><h2>Nos missions</h2></div><p class="lead">Des interventions ciblées, avant engagement, pour prendre du recul sur les conditions réelles d’un projet.</p></div>
+        <div class="missions">
+          <div class="mission">Association dans un cabinet médical ou professionnel</div>
+          <div class="mission">Entrée au capital d’une structure existante</div>
+          <div class="mission">Reprise ou acquisition d’activité</div>
+          <div class="mission">Développement d’un nouveau projet</div>
+          <div class="mission">Due diligence stratégique légère</div>
+          <div class="mission">Préparation d’une négociation complexe</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Méthode</div><h2>Une approche structurée en 4 étapes</h2></div><p class="lead">Un cadre simple pour passer de l’intuition à une décision argumentée.</p></div>
+        <div class="steps">
+          <article class="step"><span class="num">01</span><h3>Cadrage de la situation</h3><p>Clarifier le contexte, les objectifs, les contraintes et les décisions à préparer.</p></article>
+          <article class="step"><span class="num">02</span><h3>Analyse des documents et du modèle économique</h3><p>Examiner les données disponibles et les hypothèses qui structurent l’opportunité.</p></article>
+          <article class="step"><span class="num">03</span><h3>Identification des points de vigilance</h3><p>Prioriser les risques, dépendances, incohérences et sujets à approfondir.</p></article>
+          <article class="step"><span class="num">04</span><h3>Restitution claire avec recommandations</h3><p>Présenter les conclusions, scénarios et prochaines questions à traiter.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="livrables" class="section-soft">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Livrables</div><h2>Des livrables concrets</h2></div><p class="lead">Des documents pensés pour décider, négocier et dialoguer efficacement avec vos conseils spécialisés.</p></div>
+        <div class="deliverables">
+          <div class="deliverable"><strong>Note de synthèse</strong><span>Une vision courte et structurée de la situation.</span></div>
+          <div class="deliverable"><strong>Cartographie des risques</strong><span>Risques économiques, opérationnels, humains et de gouvernance.</span></div>
+          <div class="deliverable"><strong>Questions à poser aux conseils</strong><span>Points à valider avec avocats, experts-comptables, notaires ou conseils spécialisés.</span></div>
+          <div class="deliverable"><strong>Scénarios économiques</strong><span>Hypothèses, sensibilités et conséquences possibles.</span></div>
+          <div class="deliverable"><strong>Points de négociation</strong><span>Sujets à arbitrer, clarifier ou sécuriser avant engagement.</span></div>
+          <div class="deliverable"><strong>Recommandation finale</strong><span>Une position claire pour avancer, renégocier ou renoncer.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="role" class="section-dark">
+      <div class="container disclaimer">
+        <div><div class="kicker">Disclaimer</div><h2>Notre rôle</h2></div>
+        <p>Clarity Advisory intervient exclusivement sur les dimensions stratégiques, économiques et opérationnelles. Nous ne fournissons pas de consultation juridique, fiscale ou comptable. Ces sujets doivent être validés par les professionnels habilités : avocats, experts-comptables, notaires ou conseils spécialisés.</p>
+      </div>
+    </section>
+
+    <section id="a-propos">
+      <div class="container about">
+        <div><div class="kicker">À propos</div><h2>À propos</h2></div>
+        <div class="about-box"><p>Clarity Advisory est une activité de conseil portée par THELI SASU. Elle s’appuie sur une expérience entrepreneuriale, commerciale et data pour accompagner les décisions importantes avec méthode, recul et pragmatisme.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container contact-panel">
+        <div><div class="kicker">Contact</div><h2>Vous envisagez une association, une reprise ou un investissement ?</h2><p>Prenons 30 minutes pour comprendre votre situation et voir comment vous aider à prendre une décision plus claire.</p><p class="contact-note">Remplacez ce CTA par votre lien Calendly, formulaire ou adresse email de contact.</p></div>
+        <div class="cta-row"><a class="btn primary" href="mailto:?subject=Planifier%20un%20%C3%A9change%20-%20Clarity%20Advisory">Planifier un échange →</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><div class="footer-brand">Clarity Advisory</div><div>une activité de THELI SASU</div></div>
+      <div class="footer-small">Conseil stratégique & aide à la décision<br />Clarity Advisory ne fournit pas de conseil juridique, fiscal ou comptable.</div>
+    </div>
+  </footer>
+</body>
+</html>
