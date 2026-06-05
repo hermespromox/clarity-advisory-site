@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "mkdir -p dist && cp index.html dist/",
+    "build": "mkdir -p dist && cp index.html sitemap.xml robots.txt favicon.svg og-image.png dist/",
     "start": "python3 -m http.server 4173"
   }
 }
